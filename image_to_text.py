@@ -4,6 +4,7 @@ import pytesseract
 from pytesseract import Output
 pytesseract.pytesseract.tesseract_cmd = 'C://Program Files//Tesseract-OCR//tesseract.exe'
 
+#reading image 
 image = cv2.imread("test.png")
 rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 results = pytesseract.image_to_data(rgb, output_type=Output.DICT)
